@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การสร้างตารางข้อมูล</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- นำเข้าไฟล์ CSS ภายนอก -->
+    <link rel="stylesheet" href="../css/lesson06.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ปุ่มกลับหน้าหลักบทเรียน
+    ========================= -->
+    <div class="top-bar">
+        <a href="../index.html" class="home-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            กลับหน้าหลักบทเรียน
+        </a>
+    </div>
+
+    <!-- =========================
+         เนื้อหาบทเรียน
+    ========================= -->
+    <main class="lesson-card">
+
+        <!-- หัวบท -->
+        <span class="chapter-label">
+            บทที่ 6
+        </span>
+
+        <h1>
+            การสร้างตารางข้อมูล
+        </h1>
+
+        <hr class="title-line">
+
+        <!-- =========================
+             หัวข้อที่ 1
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-table"></i>
+                1. โครงสร้างตาราง HTML พื้นฐาน (HTML Table Blueprint)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        สร้างตารางด้วยแท็ก <code>&lt;table&gt;</code> โดยกำหนดแถวด้วย <code>&lt;tr&gt;</code> (Table Row)
+                    </li>
+                    <li>
+                        สร้างส่วนหัวตารางด้วย <code>&lt;th&gt;</code> (Table Header) ซึ่งข้อความจะกึ่งกลางและเป็นตัวหนาโดยอัตโนมัติ
+                    </li>
+                    <li>
+                        ใส่ข้อมูลทั่วไปในตารางด้วยแท็ก <code>&lt;td&gt;</code> (Table Data)
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">&lt;!-- ตัวอย่างโครงสร้างตาราง HTML พื้นฐาน --&gt;</span>
+&lt;table&gt;
+    &lt;tr&gt;
+        &lt;th&gt;หัวข้อ&lt;/th&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+        &lt;td&gt;ข้อมูล&lt;/td&gt;
+    &lt;/tr&gt;
+&lt;/table&gt;</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             หัวข้อที่ 2
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-table-cells"></i>
+                2. การรวมเซลล์ขั้นสูง (Advanced HTML Cell Spanning)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>colspan:</strong> ใช้ขยายหรือผสานเซลล์ข้ามแนวนอน (ผสานคอลัมน์)
+                    </li>
+                    <li>
+                        <strong>rowspan:</strong> ใช้ขยายหรือผสานเซลล์ข้ามแนวตั้ง (ผสานแถว)
+                    </li>
+                    <li>
+                        ช่วยจัดกลุ่มข้อมูลและสร้างรูปแบบตารางที่ซับซ้อนให้ดูเป็นระเบียบ
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">&lt;!-- ตัวอย่างการผสานเซลล์ --&gt;</span>
+&lt;td colspan="2"&gt;ผสานคอลัมน์&lt;/td&gt;
+&lt;td rowspan="2"&gt;ผสานแถว&lt;/td&gt;</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             หัวข้อที่ 3
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-paint-roller"></i>
+                3. การตกแต่งตารางด้วย CSS (Modern CSS Table Design)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        ใช้ <code>border-collapse: collapse;</code> เพื่อรวมเส้นขอบตารางไม่ให้เกิดช่องว่างซ้ำซ้อน
+                    </li>
+                    <li>
+                        กำหนดระยะห่างภายในเซลล์ด้วย <code>padding</code> เพื่อเพิ่มความสบายตาในการอ่านข้อมูล
+                    </li>
+                    <li>
+                        ใช้ Pseudo-class เช่น <code>:nth-child(even)</code> ในการสลับสีแถว (Zebra Striping) เพื่อช่วยให้ดูและแยกแยะแถวได้ง่ายขึ้น
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">/* ตัวอย่างการตกแต่งตารางด้วย CSS */</span>
+table {
+    border-collapse: collapse;
+}
+
+th, td {
+    padding: 10px;
+}
+
+tr:nth-child(even) {
+    background-color: #f2f2f2;
+}</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             ปุ่มเปลี่ยนบท
+        ========================= -->
+        <div class="navigation">
+            <!-- บทก่อนหน้า -->
+            <a href="lesson05.html" class="nav-button previous">
+                <i class="fa-solid fa-arrow-left"></i>
+                บทก่อนหน้า (บทที่ 5)
+            </a>
+
+            <!-- บทถัดไป -->
+            <a href="lesson07.html" class="nav-button next">
+                บทถัดไป (บทที่ 7)
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

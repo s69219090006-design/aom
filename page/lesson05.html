@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การจัดการข้อความระดับสูงและสื่อมัลติมีเดีย</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- นำเข้าไฟล์ CSS ภายนอก -->
+    <link rel="stylesheet" href="../css/lesson05.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ปุ่มกลับหน้าหลักบทเรียน
+    ========================= -->
+    <div class="top-bar">
+        <a href="../index.html" class="home-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            กลับหน้าหลักบทเรียน
+        </a>
+    </div>
+
+    <!-- =========================
+         เนื้อหาบทเรียน
+    ========================= -->
+    <main class="lesson-card">
+
+        <!-- หัวบท -->
+        <span class="chapter-label">
+            บทที่ 5
+        </span>
+
+        <h1>
+            การจัดการข้อความระดับสูงและสื่อมัลติมีเดีย
+        </h1>
+
+        <hr class="title-line">
+
+        <!-- =========================
+             หัวข้อที่ 1
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-font"></i>
+                1. การจัดการข้อความระดับสูง (Advanced Text Management)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>การกำหนดสีและขนาด:</strong>
+                        ใช้ CSS กำหนดสีด้วย <code>color</code> (รองรับชื่อสี, Hex Code เช่น #FF5733, RGB) และขนาดตัวอักษรด้วย <code>font-size</code> (นิยมใช้หน่วย px) โดยคำนึงถึงลำดับความสำคัญทางสายตา (Visual Hierarchy)
+                    </li>
+                    <li>
+                        <strong>การใช้งาน Google Fonts:</strong>
+                        เชื่อมต่อ Google Fonts ผ่านแท็ก <code>&lt;link&gt;</code> ในส่วน <code>&lt;head&gt;</code> ของ HTML และเรียกใช้ผ่าน <code>font-family</code> ช่วยแก้ปัญหาเครื่องผู้ใช้ไม่มีฟอนต์ดั้งเดิม
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">/* ตัวอย่างการใช้งาน CSS Text & Google Fonts */</span>
+body {
+    font-family: 'Sarabun', sans-serif;
+    color: #FF5733;
+    font-size: 16px;
+}</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             หัวข้อที่ 2
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-image"></i>
+                2. การแทรกรูปภาพและสื่อ (Images & Media)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>การแสดงผลรูปภาพ:</strong>
+                        แสดงผลภาพด้วยแท็ก <code>&lt;img&gt;</code> ผ่านการระบุเส้นทางไฟล์ (Source) พร้อมจัดการขนาดไฟล์ภาพให้เหมาะสมเพื่อความรวดเร็วในการโหลดหน้าเว็บ
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">&lt;!-- ตัวอย่างการแทรกรูปภาพ --&gt;</span>
+&lt;img src="images/photo.jpg" alt="คำอธิบายภาพ" width="600"&gt;</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             หัวข้อที่ 3
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-photo-film"></i>
+                3. การจัดการวิดีโอและเสียง (Video & Audio)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>มัลติมีเดีย HTML5:</strong>
+                        ใช้แท็กสื่อมัลติมีเดียของ HTML5 (<code>&lt;video&gt;</code> และ <code>&lt;audio&gt;</code>) แทรกไฟล์ลงหน้าเว็บ พร้อมเปิดใช้แอตทริบิวต์ <code>controls</code> เพื่อแสดงแผงควบคุมการเล่น
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">&lt;!-- ตัวอย่างการแทรกวิดีโอและเสียง --&gt;</span>
+&lt;video src="video.mp4" controls&gt;&lt;/video&gt;
+&lt;audio src="audio.mp3" controls&gt;&lt;/audio&gt;</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             หัวข้อที่ 4
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-window-maximize"></i>
+                4. การสร้างเฟรมด้วย Inline Frame (&lt;iframe&gt;)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>การดึงเนื้อหาภายนอก:</strong>
+                        ใช้ดึงเนื้อหาจากภายนอกมาแสดงบนหน้าเว็บ นิยมนำมาประยุกต์ใช้กับ Google Maps เพื่อแสดงแผนที่ หรือฝังวิดีโอเล่นผ่าน YouTube
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">&lt;!-- ตัวอย่างการฝัง YouTube ด้วย iframe --&gt;</span>
+&lt;iframe width="560" height="315" src="https://www.youtube.com/embed/VIDEO_ID"&gt;&lt;/iframe&gt;</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             ปุ่มเปลี่ยนบท
+        ========================= -->
+        <div class="navigation">
+            <!-- บทก่อนหน้า -->
+            <a href="lesson04.html" class="nav-button previous">
+                <i class="fa-solid fa-arrow-left"></i>
+                บทก่อนหน้า (บทที่ 4)
+            </a>
+
+            <!-- บทถัดไป -->
+            <a href="lesson06.html" class="nav-button next">
+                บทถัดไป (บทที่ 6)
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 3 - พื้นฐาน HTML และโครงสร้างเว็บไซต์</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Linking External CSS -->
+    <link rel="stylesheet" href="../css/lesson03.css">
+</head>
+
+<body>
+
+    <!-- ปุ่มกลับหน้าหลัก -->
+    <div class="top-bar">
+        <a href="../index.html" class="home-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            กลับหน้าหลักบทเรียน
+        </a>
+    </div>
+
+    <!-- MAIN -->
+    <main class="lesson-card">
+
+        <!-- หัวบท -->
+        <span class="chapter-label">บทที่ 3</span>
+        <h1>การสร้างเว็บไซต์ด้วย HTML5</h1>
+        <hr class="title-line">
+
+        <!-- หัวข้อที่ 1 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-code"></i>
+                1. โครงสร้างหลักส่วนที่เหลือ (ต่อจากหน้า 3)
+            </h2>
+
+            <div class="content">
+                <div class="prototype-box">
+                    <div class="prototype-card">
+                        <h3>
+                            <i class="fa-solid fa-heading"></i>
+                            &lt;head&gt; และ &lt;title&gt;
+                        </h3>
+                        <p>
+                            แท็ก <strong>&lt;title&gt;</strong> ต้องอยู่ภายใน <strong>&lt;head&gt;</strong> ทำหน้าที่เหมือน "ป้ายชื่อร้าน" ข้อความจะแสดงบนแท็บของเบราว์เซอร์ และ Google จะดึงไปใช้เป็นพาดหัวลิงก์หลักเวลาค้นหา (มีความสำคัญต่อ SEO มาก)
+                        </p>
+                    </div>
+
+                    <div class="prototype-card">
+                        <h3>
+                            <i class="fa-solid fa-window-maximize"></i>
+                            &lt;body&gt;
+                        </h3>
+                        <p>
+                            เปรียบเหมือน "พื้นที่ใช้สอยภายในบ้าน" เป็นส่วนที่สำคัญที่สุดสำหรับผู้ใช้งาน ทุกสิ่งที่เราต้องการให้แสดงบนหน้าจอ (เช่น ข้อความ รูปภาพ วิดีโอ ปุ่มกด) ต้องเขียนไว้ในนี้เท่านั้น หากนำไปวางใน <strong>&lt;head&gt;</strong> จะไม่แสดงผล
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 2 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-tags"></i>
+                2. การใช้งาน Tag และ Attribute
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>Tag (แท็ก):</strong>
+                        เปรียบเสมือนกล่องบรรจุภัณฑ์หรือป้ายคำสั่ง ส่วนใหญ่มาเป็นคู่คือ แท็กเปิด <code>&lt;...&gt;</code> และแท็กปิด <code>&lt;/...&gt;</code> โดยมีเนื้อหาอยู่ตรงกลาง
+                    </li>
+                    <li>
+                        <strong>Attribute (แอตทริบิวต์):</strong>
+                        คุณสมบัติเสริมที่ใส่ไว้ในแท็กเปิด เพื่อระบุรายละเอียดเฉพาะเจาะจง เช่น การกำหนดสี ขนาด การจัดวาง หรือลิงก์ปลายทาง
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 3 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-paragraph"></i>
+                3. แท็กจัดการข้อความ (Heading &amp; Paragraph)
+            </h2>
+
+            <div class="content">
+                <p>
+                    การเลือกใช้แท็กข้อความที่ถูกต้อง (Semantic HTML) ช่วยให้เว็บเป็นระเบียบ และช่วยให้บอตของ Google เข้าใจโครงสร้างเว็บได้ดีขึ้น
+                </p>
+
+                <ul class="definition-list">
+                    <li>
+                        <strong>Heading (&lt;h1&gt; ถึง &lt;h6&gt;):</strong>
+                        ใช้กำหนดหัวข้อตามลำดับความสำคัญ <code>&lt;h1&gt;</code> ใหญ่และสำคัญสุด ลดหลั่นไปจนถึง <code>&lt;h6&gt;</code>
+                    </li>
+                    <li>
+                        <strong>Paragraph (&lt;p&gt;) และ Line Break (&lt;br&gt;):</strong>
+                        <code>&lt;p&gt;</code> ใช้จัดกลุ่มข้อความยาวๆ เป็นย่อหน้า เบราว์เซอร์จะเว้นระยะห่าง (Margin) บน-ล่าง ให้อัตโนมัติเพื่อให้อ่านง่ายขึ้น
+                        <br>
+                        <code>&lt;br&gt;</code> ใช้สำหรับการบังคับขึ้นบรรทัดใหม่ทันที เพราะการกด Enter ในโปรแกรมเขียนโค้ด เบราว์เซอร์จะนับเป็นเพียงการเว้นวรรค 1 ช่องเท่านั้น
+                    </li>
+                </ul>
+
+                <!-- ข้อควรระวัง -->
+                <div class="note">
+                    <div class="note-title">
+                        <i class="fa-solid fa-circle-exclamation"></i>
+                        ข้อควรระวัง
+                    </div>
+                    ใน 1 หน้าเว็บ ควรมี <strong>&lt;h1&gt;</strong> เพียงตัวเดียวเท่านั้น (เสมือนพาดหัวข่าวหน้าหนึ่ง) เพื่อไม่ให้ระบบค้นหาสับสน
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <div class="navigation">
+            <!-- บทก่อนหน้า -->
+            <a href="lesson02.html" class="nav-button previous">
+                <i class="fa-solid fa-arrow-left"></i>
+                บทก่อนหน้า (บทที่ 2)
+            </a>
+
+            <!-- บทถัดไป -->
+            <a href="lesson04.html" class="nav-button next">
+                บทถัดไป (บทที่ 4)
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

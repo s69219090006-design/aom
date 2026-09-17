@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 2 - การออกแบบเว็บไซต์</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/lesson02.css">
+</head>
+
+<body>
+
+    <!-- ปุ่มกลับหน้าหลัก -->
+    <div class="top-bar">
+        <a href="../index.html" class="home-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            กลับหน้าหลักบทเรียน
+        </a>
+    </div>
+
+    <!-- MAIN -->
+    <main class="lesson-card">
+
+        <!-- หัวบท -->
+        <span class="chapter-label">บทที่ 2</span>
+        <h1>หลักการออกแบบเว็บไซต์</h1>
+        <hr class="title-line">
+
+        <!-- หัวข้อที่ 1 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-palette"></i>
+                1. หลักการออกแบบเว็บไซต์ (Principles of Web Design)
+            </h2>
+
+            <div class="content">
+                <p>
+                    การออกแบบไม่ใช่แค่ความสวยงาม แต่ต้องควบคู่กันระหว่าง <strong>UI (User Interface)</strong> ที่สวยงาม และ <strong>UX (User Experience)</strong> ที่ดี
+                </p>
+                <p>
+                    เพื่อช่วยลดอัตราการกดออกจากเว็บ <strong>(Bounce Rate)</strong> และเพิ่มโอกาสความสำเร็จทางธุรกิจ <strong>(Conversion Rate)</strong>
+                </p>
+                <p>
+                    <strong>ทฤษฎีการใช้สี (Color Theory):</strong> สีเป็นเครื่องมือสื่อสาร สะท้อนตัวตนของแบรนด์ <strong>(Brand Identity)</strong> และกระตุ้นอารมณ์ผู้ใช้ เช่น
+                </p>
+
+                <!-- สี -->
+                <div class="color-box">
+                    <div class="color-item">
+                        <div class="color-name blue">น้ำเงิน</div>
+                        ความเชื่อมั่น มั่นคง มืออาชีพ
+                    </div>
+                    <div class="color-item">
+                        <div class="color-name red">แดง</div>
+                        พลังงาน เร่งด่วน
+                    </div>
+                    <div class="color-item">
+                        <div class="color-name green">เขียว</div>
+                        ธรรมชาติ ปลอดภัย สินค้าสุขภาพ
+                    </div>
+                    <div class="color-item">
+                        <div class="color-name black">ดำ</div>
+                        หรูหรา ทันสมัย พรีเมียม
+                    </div>
+                </div>
+
+                <ul class="definition-list">
+                    <li>
+                        <strong>การเลือกใช้ตัวอักษร (Typography):</strong> เน้นให้อ่านง่าย (Readability) และทุกคนเข้าถึงได้ (Accessibility)
+                    </li>
+                    <li>
+                        ต้องมี <strong>Contrast Ratio</strong> หรือความต่างสีฟอนต์กับพื้นหลัง ที่ชัดเจน เพื่อไม่ให้ล้าสายตา
+                    </li>
+                    <li>
+                        ใช้ <strong>Visual Hierarchy</strong> หรือการจัดลำดับสายตา โดยปรับ Size & Weight ให้หัวข้อใหญ่และหนากว่าเนื้อหา รวมถึงเว้น <strong>White Space</strong> ให้สบายตา
+                    </li>
+                </ul>
+
+                <div class="note">
+                    <div class="note-title">
+                        <i class="fa-solid fa-circle-info"></i>
+                        ข้อควรจำ
+                    </div>
+                    เว็บไซต์ที่ดีต้องคำนึงถึงทั้ง <strong>UI</strong> และ <strong>UX</strong> ไม่ใช่เพียงแค่ทำให้เว็บไซต์สวย แต่ต้องใช้งานง่ายและอ่านข้อมูลได้สะดวก
+                </div>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 2 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-layer-group"></i>
+                2. องค์ประกอบและเลย์เอาต์ (Elements and Layout)
+            </h2>
+
+            <div class="content">
+                <p>
+                    การจัดหน้าเว็บมาตรฐานสากลแบ่งออกเป็น <strong>3 ส่วนหลัก (Navigation Flow)</strong> เพื่อให้ผู้ใช้หาข้อมูลได้ง่ายที่สุด
+                </p>
+
+                <ol class="number-list">
+                    <li>
+                        <strong>Header / Navigation Bar:</strong> ส่วนบนสุด ประกอบด้วยโลโก้ และเมนูนำทาง ช่วยสร้างภาพจำของแบรนด์ และลดจำนวนคลิกในการเข้าถึงข้อมูล
+                    </li>
+                    <li>
+                        <strong>Content Area:</strong> พื้นที่ตรงกลางสำหรับแสดงเนื้อหาหลัก เช่น ข้อความ ภาพ และวิดีโอ โดยจัดวางตามพฤติกรรมการอ่านของมนุษย์ คือบนลงล่าง และซ้ายไปขวา
+                    </li>
+                    <li>
+                        <strong>Footer:</strong> ส่วนท้ายสุดของเว็บ สำหรับใส่ข้อมูลสนับสนุน เช่น ข้อมูลติดต่อ Privacy Policy และลิงก์โซเชียลมีเดีย
+                    </li>
+                </ol>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 3 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-pen-ruler"></i>
+                3. ขั้นตอนการทำ Prototype (แบบจำลองต้นแบบ)
+            </h2>
+
+            <div class="content">
+                <p>
+                    การทำต้นแบบก่อนเขียนโค้ดจริง ช่วยให้มองเห็นปัญหาของขั้นตอนการใช้งาน <strong>(User Flow)</strong> และประหยัดเวลาและต้นทุน
+                </p>
+                <p>แบ่งเป็น 2 ระดับ ดังนี้</p>
+
+                <div class="prototype-box">
+                    <div class="prototype-card">
+                        <h3>
+                            <i class="fa-solid fa-pen"></i>
+                            Low-fidelity Wireframe
+                        </h3>
+                        <p>
+                            ร่างโครงสร้างพื้นฐานแบบง่าย ๆ ด้วยเส้นขาว ดำ หรือเทา เปรียบเหมือน <strong>"แบบแปลนบ้าน"</strong> เพื่อดูตำแหน่ง Layout
+                        </p>
+                    </div>
+
+                    <div class="prototype-card">
+                        <h3>
+                            <i class="fa-solid fa-image"></i>
+                            High-fidelity Mockup
+                        </h3>
+                        <p>
+                            ใส่สี รูปภาพ ฟอนต์ และกราฟิกจริง เปรียบเหมือน <strong>"การตกแต่งภายในบ้าน"</strong> เพื่อให้เห็นหน้าตาจริง ก่อนส่งต่อให้นักพัฒนา
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 4 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-mobile-screen-button"></i>
+                4. เทคนิคการออกแบบสมัยใหม่ (Modern Design Techniques)
+            </h2>
+
+            <div class="content">
+                <div class="responsive-box">
+                    <h3>
+                        <i class="fa-solid fa-display"></i>
+                        Responsive Design
+                    </h3>
+                    <p>
+                        การออกแบบให้หน้าเว็บ ปรับขนาดการแสดงผลโดยอัตโนมัติ ตามหน้าจอของอุปกรณ์ เช่น Desktop, Tablet และ Mobile เพื่อให้ผู้ใช้ได้รับประสบการณ์ การใช้งานที่ลื่นไหล
+                    </p>
+                </div>
+
+                <div class="responsive-box">
+                    <h3>
+                        <i class="fa-solid fa-mobile-screen"></i>
+                        Mobile First Design
+                    </h3>
+                    <p>
+                        แนวคิดการเริ่มดีไซน์จากหน้าจอมือถือ ที่มีพื้นที่จำกัดก่อน แล้วค่อยขยายไปยังจอใหญ่
+                    </p>
+                    <p>
+                        ช่วยให้คัดเลือกเฉพาะเนื้อหา และฟีเจอร์ที่สำคัญจริง ๆ ตัดส่วนเกิน <strong>(Feature Bloat)</strong> ออกไป และทำให้เว็บโหลดเร็วขึ้น
+                    </p>
+                </div>
+
+                <!-- ข้อควรจำ -->
+                <div class="note">
+                    <div class="note-title">
+                        <i class="fa-solid fa-circle-info"></i>
+                        ข้อควรจำ
+                    </div>
+                    Responsive Design ช่วยให้เว็บไซต์แสดงผลได้เหมาะสม บนหลายขนาดหน้าจอ ส่วน Mobile First เน้นการออกแบบจากหน้าจอมือถือก่อน แล้วจึงขยายไปยังอุปกรณ์ที่มีหน้าจอใหญ่ขึ้น
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <div class="navigation">
+            <a href="lesson01.html" class="nav-button previous">
+                <i class="fa-solid fa-arrow-left"></i>
+                บทก่อนหน้า (บทที่ 1)
+            </a>
+
+            <a href="lesson03.html" class="nav-button next">
+                บทถัดไป (บทที่ 3)
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

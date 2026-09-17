@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บทที่ 9 JavaScript: สมองกลผู้เนรมิตชีวิตให้เว็บไซต์</title>
+  <link rel="stylesheet" href="../css/lesson09.css">
+</head>
+<body>
+
+  <div class="card-container">
+    <!-- ปุ่มกลับหน้าหลักบทเรียน -->
+    <a href="../index.html" class="btn-back">← กลับหน้าหลักบทเรียน</a>
+
+    <div class="card">
+      <!-- ส่วนหัวบทเรียน -->
+      <span class="badge">บทที่ 9</span>
+      <h1 class="title">JavaScript: สมองกลผู้เนรมิตชีวิตให้เว็บไซต์</h1>
+
+      <hr class="divider">
+
+      <!-- หัวข้อที่ 1 -->
+      <div class="section">
+        <h2 class="section-title text-blue">
+          <span class="icon">🤖</span> 1. แนวคิดพื้นฐานและการเปรียบเทียบเชิงโครงสร้าง (Robotic Blueprint)
+        </h2>
+        <ul class="list">
+          <li><strong>แนวคิดหลัก:</strong> JavaScript เปรียบเสมือนระบบประสาทและสมองกลที่เปลี่ยนหน้าเว็บจากโครงสร้างตายตัว ให้กลายเป็นแอปพลิเคชันที่มีชีวิต โต้ตอบกับผู้ใช้ได้แบบเรียลไทม์</li>
+          <li><strong>HTML (Structural Skeleton):</strong> โครงร่างกระดูกของหุ่นยนต์</li>
+          <li><strong>CSS (Visual Styling):</strong> เกราะความสวยงาม สีสัน และการจัดวางภายนอก</li>
+          <li><strong>JavaScript (Activation & Behavioral Systems):</strong> ระบบสมองกลที่ทำให้หุ่นยนต์สามารถขยับ โต้ตอบ และประมวลผลได้</li>
+        </ul>
+      </div>
+
+      <!-- หัวข้อที่ 2 -->
+      <div class="section">
+        <h2 class="section-title text-blue">
+          <span class="icon">🔄</span> 2. กระบวนการโต้ตอบและประมวลผล (Interactive Cycle)
+        </h2>
+        <ul class="list">
+          <li><strong>User Action:</strong> ผู้ใช้งานกระทำบนหน้าเว็บ เช่น การคลิกปุ่ม พิมพ์ข้อความ หรือเลื่อนหน้าจอ</li>
+          <li><strong>Event Trigger:</strong> แอตทริบิวต์เหตุการณ์ (เช่น <code>onclick</code>) ทำหน้าที่เป็นตัวส่งสัญญาณแจ้งเตือนระบบ</li>
+          <li><strong>Function Execution:</strong> ปลุกชุดคำสั่ง JavaScript ที่เตรียมไว้ขึ้นมาทำงานทันทีเพื่อเปลี่ยนแปลงหน้าเว็บ</li>
+        </ul>
+      </div>
+
+      <!-- หัวข้อที่ 3 -->
+      <div class="section">
+        <h2 class="section-title text-blue">
+          <span class="icon">⚡</span> 3. การทำงานร่วมกันกับ HTML เพื่อเปลี่ยนเนื้อหาหน้าเว็บ
+        </h2>
+        <ul class="list">
+          <li><strong>อ้างอิงเป้าหมายด้วย ID:</strong> กำหนด <code>id="promo-text"</code> ไว้ที่แท็ก HTML</li>
+          <li><strong>ดักจับเหตุการณ์:</strong> ใช้ <code>onclick="getBonus()"</code> ที่ตัวปุ่มกด</li>
+          <li><strong>สั่งการประมวลผล:</strong> สั่งงานผ่านฟังก์ชันเพื่อล็อคเป้าหมายและแก้ไขเนื้อหา</li>
+        </ul>
+
+        <!-- กล่องโค้ดสีดำ -->
+        <div class="code-box">
+          <span class="code-comment">&lt;!-- โครงสร้าง HTML --&gt;</span><br>
+          &lt;p id="promo-text"&gt;ข้อความเดิม&lt;/p&gt;<br>
+          &lt;button onclick="getBonus()"&gt;รับโบนัส&lt;/button&gt;<br><br>
+          <span class="code-comment">&lt;!-- คำสั่ง JavaScript ในฟังก์ชัน --&gt;</span><br>
+          document.getElementById("promo-text").innerHTML = "ข้อความใหม่";
+        </div>
+      </div>
+
+      <!-- หัวข้อที่ 4 -->
+      <div class="section">
+        <h2 class="section-title text-blue">
+          <span class="icon">🛠️</span> 4. ข้อจำกัดของ HTML5 และเหตุผลที่ต้องใช้ JavaScript
+        </h2>
+        <ul class="list">
+          <li><strong>ข้อจำกัดของ HTML5:</strong> ขาดความยืดหยุ่น เช่น ไม่สามารถแจ้งเตือนข้อความแบบ Custom ที่เข้ากับดีไซน์ หรือไม่สามารถประมวลผลเงื่อนไขซับซ้อนหลายชั้นได้</li>
+          <li><strong>ทางออกด้วย JavaScript:</strong> ช่วยควบคุมเงื่อนไขการกรอกข้อมูล ตรวจสอบความถูกต้องที่ซับซ้อน และเปิด/ปิดการแสดงผลหน้าเว็บได้แบบทันทีโดยไม่ต้องโหลดหน้าใหม่</li>
+        </ul>
+      </div>
+
+      <!-- ปุ่มนำทางท้ายการ์ด -->
+      <div class="nav-buttons">
+        <a href="lesson08.html" class="btn-nav">← บทก่อนหน้า (บทที่ 8)</a>
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

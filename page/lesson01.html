@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 1 - พื้นฐานเว็บไซต์</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- ลิงก์ไปยังไฟล์ CSS แยก -->
+    <link rel="stylesheet" href="../css/lesson01.css">
+</head>
+
+<body>
+
+    <!-- ปุ่มกลับหน้าหลักบทเรียน -->
+    <div class="top-bar">
+        <a href="../index.html" class="home-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            กลับหน้าหลักบทเรียน
+        </a>
+    </div>
+
+    <!-- เนื้อหาบทเรียน -->
+    <main class="lesson-card">
+
+        <!-- หัวบท -->
+        <span class="chapter-label">บทที่ 1</span>
+        <h1>พื้นฐานและกระบวนการทํางานของเว็บไซต์</h1>
+        <hr class="title-line">
+
+        <!-- หัวข้อที่ 1 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-globe"></i>
+                1. ความหมายและองค์ประกอบของเว็บ
+            </h2>
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>Web Page:</strong>
+                        หน้ากระดาษแต่ละหน้าที่มีเนื้อหาเฉพาะเรื่อง เช่น หน้าบทความ หรือแกลเลอรี
+                    </li>
+                    <li>
+                        <strong>Website:</strong>
+                        หนังสือทั้งเล่มที่รวม Web Page หลาย ๆ หน้าเข้าด้วยกัน
+                    </li>
+                    <li>
+                        <strong>Home Page:</strong>
+                        หน้าปกหนังสือ หรือหน้าแรกสุดที่ผู้ใช้จะพบเมื่อเข้าเว็บ
+                    </li>
+                    <li>
+                        <strong>Web Browser:</strong>
+                        ทำหน้าที่เป็น "ผู้แปลภาษา" อ่านโค้ด HTML, CSS และ JavaScript แล้วประมวลผลออกมาเป็นหน้าเว็บที่สวยงาม
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 2 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-book-open"></i>
+                2. ประเภทเทคโนโลยีเว็บไซต์
+            </h2>
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>Static Website (เว็บนิ่ง):</strong>
+                        โครงสร้างพื้นฐานใช้ HTML/CSS ข้อมูลตายตัว ทุกคนเห็นเหมือนกัน โหลดเร็วและปลอดภัยสูง แต่แก้ไขยากเพราะต้องแก้ที่โค้ดทีละหน้า เหมาะกับเว็บไซต์ประเภท Portfolio
+                    </li>
+                    <li>
+                        <strong>Dynamic Website (เว็บเคลื่อนไหว):</strong>
+                        ทำงานร่วมกับระบบหลังบ้าน (Backend) และฐานข้อมูล (Database) เนื้อหาเปลี่ยนตามการโต้ตอบ เวลา หรือข้อมูลผู้ใช้ เหมาะกับร้านค้าออนไลน์หรือโซเชียลมีเดีย
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 3 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-server"></i>
+                3. กระบวนการทำงานแบบ Client-Server Model
+            </h2>
+            <div class="content">
+                <p>
+                    เปรียบเสมือน <strong>"การสั่งอาหารในร้าน"</strong> มีขั้นตอนดังนี้
+                </p>
+
+                <ol class="number-list">
+                    <li>
+                        <strong>Request (สั่งอาหาร):</strong>
+                        ผู้ใช้พิมพ์ URL หรือกดลิงก์ผ่าน Web Browser (Client) เพื่อส่งคำขอข้อมูล
+                    </li>
+                    <li>
+                        <strong>Processing (ปรุงอาหาร):</strong>
+                        เครื่องคอมพิวเตอร์ที่เก็บไฟล์เว็บ (Server) รับคำขอ แล้วจัดเตรียมข้อมูล หรือดึงข้อมูลจาก Database
+                    </li>
+                    <li>
+                        <strong>Response (เสิร์ฟอาหาร):</strong>
+                        Server ส่งข้อมูลกลับมา ในรูปแบบไฟล์โค้ด HTML, CSS และ JS ผ่านอินเทอร์เน็ต
+                    </li>
+                    <li>
+                        <strong>Rendering (กินอาหาร):</strong>
+                        Web Browser แปลงโค้ดเหล่านั้น ออกมาเป็นหน้าตาเว็บไซต์ ให้เราใช้งาน
+                    </li>
+                </ol>
+
+                <!-- ตัวอย่าง -->
+                <div class="code-box"><span class="code-comment">// ตัวอย่างการทำงานของ Client-Server</span>
+Client → Request → Server
+Server → Response → Client
+Browser → Rendering → Web Page</div>
+
+                <!-- ข้อควรจำ -->
+                <div class="note">
+                    <div class="note-title">
+                        <i class="fa-solid fa-circle-info"></i>
+                        ข้อควรจำ
+                    </div>
+                    Client คือผู้ขอข้อมูล ส่วน Server คือผู้ให้บริการข้อมูล และ Web Browser ทำหน้าที่แสดงผลข้อมูล ให้ผู้ใช้สามารถมองเห็นและใช้งานเว็บไซต์ได้
+                </div>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 4 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-link"></i>
+                4. มาตรฐานการสื่อสาร (Protocols)
+            </h2>
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>URL (Uniform Resource Locator):</strong>
+                        ที่อยู่หรือลิงก์ที่ระบุตำแหน่งของหน้าเว็บอย่างแม่นยำบนอินเทอร์เน็ต
+                    </li>
+                    <li>
+                        <strong>HTTP (Hypertext Transfer Protocol):</strong>
+                        มาตรฐานหรือภาษากลางที่ใช้ในการรับ-ส่งข้อมูลระหว่าง Client และ Server
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <!-- ปุ่มเปลี่ยนบท -->
+        <div class="navigation">
+            <!-- บทก่อนหน้า -->
+            <a href="#" class="nav-button previous">
+                <i class="fa-solid fa-arrow-left"></i>
+                บทก่อนหน้า
+            </a>
+
+            <!-- บทถัดไป -->
+            <a href="lesson02.html" class="nav-button next">
+                บทถัดไป (บทที่ 2)
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>บทที่ 8 แท็กฟอร์มและองค์ประกอบรับข้อมูล</title>
+  <link rel="stylesheet" href="../css/lesson08.css">
+</head>
+<body>
+
+  <div class="card-container">
+    <!-- ปุ่มกลับหน้าหลักบทเรียน -->
+    <a href="../index.html" class="btn-back">← กลับหน้าหลักบทเรียน</a>
+
+    <div class="card">
+      <!-- ส่วนหัวบทเรียน -->
+      <span class="badge">บทที่ 8</span>
+      <h1 class="title">แท็กฟอร์มและองค์ประกอบรับข้อมูลด้วย HTML</h1>
+
+      <hr class="divider">
+
+      <!-- หัวข้อที่ 1 -->
+      <div class="section">
+        <h2 class="section-title text-blue">
+          <span class="icon">🔗</span> 1. แท็กฟอร์มและแอตทริบิวต์หลัก
+        </h2>
+        <ul class="list">
+          <li>ใช้แท็ก <code>&lt;form&gt;</code> ในการครอบส่วนประกอบทั้งหมดของแบบฟอร์ม เพื่อรวบรวมและส่งข้อมูล</li>
+          <li><strong>action:</strong> กำหนดไฟล์หรือ URL ปลายทางที่เซิร์ฟเวอร์สำหรับรับและประมวลผลข้อมูล</li>
+          <li><strong>method (GET):</strong> ส่งข้อมูลผ่าน URL เหมาะกับข้อมูลทั่วไป เช่น การค้นหา</li>
+          <li><strong>method (POST):</strong> ส่งข้อมูลแบบซ่อนไปกับ Header เหมาะกับข้อมูลสำคัญหรือความลับ</li>
+        </ul>
+
+        <!-- กล่องโค้ดสีดำ -->
+        <div class="code-box">
+          <span class="code-comment">&lt;!-- ตัวอย่างการสร้างฟอร์มรับข้อมูล --&gt;</span><br>
+          &lt;form action="process.php" method="POST"&gt;<br>
+          &nbsp;&nbsp;&lt;input type="text" name="username"&gt;<br>
+          &lt;/form&gt;
+        </div>
+      </div>
+
+      <!-- หัวข้อที่ 2 -->
+      <div class="section">
+        <h2 class="section-title text-blue">
+          <span class="icon">🔗</span> 2. ชนิดขององค์ประกอบรับข้อมูล (Input Controls)
+        </h2>
+        <ul class="list">
+          <li><strong>ข้อความ:</strong> <code>&lt;input type="text"&gt;</code> รับข้อความทั่วไป, <code>&lt;input type="password"&gt;</code> รับรหัสผ่าน, และ <code>&lt;textarea&gt;</code> รับข้อความยาว</li>
+          <li><strong>ตัวเลือก:</strong> <code>&lt;input type="radio"&gt;</code> เลือกได้ 1 ข้อ, <code>&lt;input type="checkbox"&gt;</code> เลือกได้หลายข้อ, และ <code>&lt;select&gt;</code> รายการดรอปดาวน์</li>
+          <li><strong>ปุ่มดำเนินการ:</strong> <code>&lt;input type="submit"&gt;</code> ปุ่มส่งข้อมูล และ <code>&lt;input type="reset"&gt;</code> ปุ่มล้างข้อมูล</li>
+        </ul>
+
+        <!-- กล่องโค้ดสีดำ -->
+        <div class="code-box">
+          <span class="code-comment">&lt;!-- ตัวอย่างการใช้งาน Input แบบต่างๆ --&gt;</span><br>
+          &lt;input type="text" placeholder="กรอกชื่อ"&gt;<br>
+          &lt;input type="password" placeholder="กรอกรหัสผ่าน"&gt;<br><br>
+          <span class="code-comment">&lt;!-- ตัวอย่างปุ่มดำเนินการ --&gt;</span><br>
+          &lt;input type="submit" value="ส่งข้อมูล"&gt;<br>
+          &lt;input type="reset" value="ล้างข้อมูล"&gt;
+        </div>
+      </div>
+
+      <!-- หัวข้อที่ 3 -->
+      <div class="section">
+        <h2 class="section-title text-blue">
+          <span class="icon">🛠️</span> 3. การตรวจสอบความถูกต้องของข้อมูล (HTML5 Validation)
+        </h2>
+        <ul class="list">
+          <li><strong>required:</strong> บังคับให้ผู้ใช้ต้องกรอกข้อมูล ห้ามเว้นว่าง</li>
+          <li><strong>type="email" / type="url":</strong> ตรวจสอบรูปแบบอีเมลหรือ URL ให้ถูกต้องตามโครงสร้าง</li>
+          <li><strong>min / max / maxlength:</strong> กำหนดช่วงตัวเลขต่ำสุด-สูงสุด หรือจำนวนตัวอักษรสูงสุดที่อนุญาตให้กรอก</li>
+        </ul>
+      </div>
+
+      <!-- ปุ่มนำทางท้ายการ์ด -->
+      <div class="nav-buttons">
+        <a href="lesson07.html" class="btn-nav">← บทก่อนหน้า (บทที่ 7)</a>
+        <a href="lesson09.html" class="btn-nav btn-next">บทถัดไป (บทที่ 9) →</a>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>การทำลิงก์และการเชื่อมโยงด้วย HTML & CSS</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- นำเข้าไฟล์ CSS ภายนอก -->
+    <link rel="stylesheet" href="../css/lesson07.css">
+</head>
+
+<body>
+
+    <!-- =========================
+         ปุ่มกลับหน้าหลักบทเรียน
+    ========================= -->
+    <div class="top-bar">
+        <a href="../index.html" class="home-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            กลับหน้าหลักบทเรียน
+        </a>
+    </div>
+
+    <!-- =========================
+         เนื้อหาบทเรียน
+    ========================= -->
+    <main class="lesson-card">
+
+        <!-- หัวบท -->
+        <span class="chapter-label">
+            บทที่ 7
+        </span>
+
+        <h1>
+            การทำลิงก์และการเชื่อมโยงด้วย HTML & CSS
+        </h1>
+
+        <hr class="title-line">
+
+        <!-- =========================
+             หัวข้อที่ 1
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-link"></i>
+                1. พื้นฐานการทำลิงก์ (HTML Anchor Tag)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        ใช้แท็ก <code>&lt;a&gt;</code> (Anchor) ร่วมกับแอตทริบิวต์ <code>href</code> เพื่อระบุตำแหน่งปลายทาง
+                    </li>
+                    <li>
+                        <strong>Internal Link:</strong> การเชื่อมโยงภายในเว็บไซต์เดียวกัน ใช้โครงสร้าง Relative Path โดยระบุชื่อไฟล์ได้โดยตรง เช่น <code>&lt;a href="about.html"&gt;</code> นิยมใช้ทำแถบเมนูนำทาง (Navigation Bar)
+                    </li>
+                    <li>
+                        <strong>External Link:</strong> การเชื่อมโยงไปยังเว็บไซต์ภายนอก ใช้ Absolute Path โดยต้องระบุ URL แบบเต็มที่ขึ้นต้นด้วย <code>http://</code> หรือ <code>https://</code> เสมอ เช่น <code>&lt;a href="https://www.facebook.com"&gt;</code>
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">&lt;!-- ตัวอย่าง Internal & External Link --&gt;</span>
+&lt;a href="about.html"&gt;เกี่ยวกับเรา&lt;/a&gt;
+&lt;a href="https://www.facebook.com"&gt;Facebook&lt;/a&gt;</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             หัวข้อที่ 2
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-arrow-up-right-from-square"></i>
+                2. เทคนิคการเชื่อมโยง (Link Techniques)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        <strong>target="_blank":</strong> ใช้บังคับให้เปิดลิงก์ปลายทางในแท็บหรือหน้าต่างใหม่
+                    </li>
+                    <li>
+                        <strong>Anchor Link:</strong> การสร้างจุดเชื่อมโยงเพื่อกระโดดข้ามไปยังตำแหน่งต่างๆ ภายในหน้าเพจเดียวกัน
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">&lt;!-- ตัวอย่างการเปิดแท็บใหม่ และ Anchor Link --&gt;</span>
+&lt;a href="https://google.com" target="_blank"&gt;เปิด Google แท็บใหม่&lt;/a&gt;
+
+&lt;!-- เชื่อมโยงไปยัง element ที่มี id="section1" --&gt;
+&lt;a href="#section1"&gt;ไปยังหัวข้อ 1&lt;/a&gt;</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             หัวข้อที่ 3
+        ========================= -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-wand-magic-sparkles"></i>
+                3. การปรับแต่งลิงก์ด้วย CSS (Link States & Styling)
+            </h2>
+
+            <div class="content">
+                <ul class="definition-list">
+                    <li>
+                        กำหนดสไตล์และสีสันของลิงก์ตามสถานะการโต้ตอบของผู้ใช้ (Link States ทั้ง 4 รูปแบบ: <code>:link</code>, <code>:visited</code>, <code>:hover</code>, <code>:active</code>)
+                    </li>
+                    <li>
+                        ตกแต่งลิงก์ด้วย CSS เช่น การลบเส้นใต้ข้อความ (<code>text-decoration: none;</code>) และปรับแต่งส่วนประกอบจนมีลักษณะเป็นปุ่มกดที่สวยงาม
+                    </li>
+                </ul>
+
+                <!-- ตัวอย่างโค้ด -->
+                <div class="code-box"><span class="code-comment">/* ตัวอย่างการตกแต่งลิงก์ด้วย CSS */</span>
+a {
+    color: #087ff5;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #006bd6;
+    text-decoration: underline;
+}</div>
+            </div>
+        </section>
+
+        <!-- =========================
+             ปุ่มเปลี่ยนบท
+        ========================= -->
+        <div class="navigation">
+            <!-- บทก่อนหน้า -->
+            <a href="lesson06.html" class="nav-button previous">
+                <i class="fa-solid fa-arrow-left"></i>
+                บทก่อนหน้า (บทที่ 6)
+            </a>
+            <!-- บทถัดไป -->
+            <a href="lesson08.html" class="nav-button next">
+                บทถัดไป (บทที่ 8)
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>

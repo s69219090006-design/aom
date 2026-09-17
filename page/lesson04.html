@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="th">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>บทที่ 4 - พื้นฐาน CSS และการเชื่อมต่อ</title>
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <!-- Linking External CSS -->
+    <link rel="stylesheet" href="../css/lesson04.css">
+</head>
+
+<body>
+
+    <!-- ปุ่มกลับหน้าหลัก -->
+    <div class="top-bar">
+        <a href="../index.html" class="home-button">
+            <i class="fa-solid fa-arrow-left"></i>
+            กลับหน้าหลักบทเรียน
+        </a>
+    </div>
+
+    <!-- MAIN -->
+    <main class="lesson-card">
+
+        <!-- หัวบท -->
+        <span class="chapter-label">บทที่ 4</span>
+        <h1>การจัดรูปแบบเว็บไซต์ด้วย CSS</h1>
+        <hr class="title-line">
+
+        <!-- หัวข้อที่ 1 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-paint-roller"></i>
+                1. พื้นฐาน CSS (Cascading Style Sheets)
+            </h2>
+
+            <div class="content">
+                <p>
+                    <strong>แนวคิด:</strong>
+                    ถ้า HTML คือ "การก่ออิฐเทปูน" สร้างโครงสร้างบ้าน CSS ก็คือ "การตกแต่งภายในและภายนอก" (ทาสี เลือกกระเบื้อง จัดวางเฟอร์นิเจอร์) เพื่อความสวยงามและระเบียบในการแสดงผล
+                </p>
+
+                <div class="note">
+                    <div class="note-title">
+                        <i class="fa-solid fa-circle-check"></i>
+                        ข้อดีของการใช้ CSS
+                    </div>
+                    แยกส่วนการทำงานออกจาก HTML ชัดเจน ทำให้ดูแลรักษาง่าย เช่น หากต้องการเปลี่ยนสีองค์ประกอบเดียวกันในเว็บที่มี 100 หน้า การใช้ CSS จะช่วยให้แก้ไขโค้ดเพียงบรรทัดเดียวในไฟล์ส่วนกลาง แทนที่จะต้องตามแก้ใน HTML ทีละหน้า
+                </div>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 2 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-link"></i>
+                2. วิธีการเชื่อมต่อ CSS (2 รูปแบบหลัก)
+            </h2>
+
+            <div class="content">
+                <div class="prototype-box">
+                    <div class="prototype-card">
+                        <h3>
+                            <i class="fa-solid fa-code"></i>
+                            1. การเขียนแบบ Internal (สไตล์ชีตภายใน)
+                        </h3>
+                        <p>
+                            <strong>วิธีใช้:</strong> เขียนโค้ด CSS แทรกไว้ในไฟล์ HTML โดยตรง ภายใต้แท็ก <code>&lt;style&gt;</code> (มักใส่ไว้ในแท็ก <code>&lt;head&gt;</code>)
+                        </p>
+                        <p>
+                            <strong>ข้อดี:</strong> สะดวก รวดเร็ว เหมาะกับเว็บไซต์ขนาดเล็กหรือหน้าเดียว (Single Page)
+                        </p>
+                        <p>
+                            <strong>ข้อเสีย:</strong> ไม่สามารถนำสไตล์ไปใช้ร่วมกับหน้าอื่นได้ หากเว็บมีหลายหน้าจะทำให้เกิดโค้ดที่ซ้ำซ้อน
+                        </p>
+                    </div>
+
+                    <div class="prototype-card">
+                        <h3>
+                            <i class="fa-solid fa-file-code"></i>
+                            2. การเขียนแบบ External (สไตล์ชีตภายนอก)
+                        </h3>
+                        <p>
+                            <strong>วิธีใช้:</strong> แยกโค้ด CSS ทั้งหมดไปไว้ในไฟล์ใหม่ (นามสกุล .css) แล้วใช้แท็ก <code>&lt;link&gt;</code> ในไฟล์ HTML เพื่อดึงข้อมูลมาใช้งาน
+                        </p>
+                        <p>
+                            <strong>ข้อดี:</strong> เป็น "มาตรฐานระดับมืออาชีพ" ช่วยให้ไฟล์ HTML สะอาดตา และเมื่อต้องการแก้ไขดีไซน์ ก็แก้ที่ไฟล์ CSS เพียงไฟล์เดียว ทุกหน้าในเว็บไซต์จะอัปเดตพร้อมกันทันที
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- หัวข้อที่ 3 -->
+        <section class="topic">
+            <h2 class="topic-title">
+                <i class="fa-solid fa-graduation-cap"></i>
+                3. หัวข้อที่จะได้เรียนรู้ต่อไปในบทนี้
+            </h2>
+
+            <div class="content">
+                <div class="responsive-box">
+                    <h3>
+                        <i class="fa-solid fa-box"></i>
+                        ระบบ Box Model
+                    </h3>
+                    <p>การจัดการพื้นที่ (เช่น Padding และ Margin)</p>
+                </div>
+
+                <div class="responsive-box">
+                    <h3>
+                        <i class="fa-solid fa-table-columns"></i>
+                        การจัดตำแหน่ง (Layout Positioning)
+                    </h3>
+                    <p>เทคนิคพื้นฐานการใช้ Display และ Position</p>
+                </div>
+
+                <div class="responsive-box">
+                    <h3>
+                        <i class="fa-solid fa-flask"></i>
+                        การปฏิบัติการ
+                    </h3>
+                    <p>ทดลองเชื่อมต่อ CSS ทั้ง 2 แบบ, การควบคุมระยะห่างด้วย Box Model และการใช้ Flexbox ร่วมกับ Fixed Position เพื่อสร้างแถบเมนู</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- NAVIGATION -->
+        <div class="navigation">
+            <!-- บทก่อนหน้า -->
+            <a href="lesson03.html" class="nav-button previous">
+                <i class="fa-solid fa-arrow-left"></i>
+                บทก่อนหน้า (บทที่ 3)
+            </a>
+
+            <!-- บทถัดไป -->
+            <a href="lesson05.html" class="nav-button next">
+                บทถัดไป (บทที่ 5)
+                <i class="fa-solid fa-arrow-right"></i>
+            </a>
+        </div>
+
+    </main>
+
+</body>
+
+</html>
